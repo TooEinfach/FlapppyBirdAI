@@ -165,6 +165,9 @@ def draw_window(win, birds, pipes, base, score, gen):
     text = STAT_FONT.render("Gen: " + str(gen), 1,(255,255,255))
     win.blit(text, (10, 10))
 
+    score_label = STAT_FONT.render("Alive: " + str(len(birds)),1,(255,255,255))
+    win.blit(score_label, (10, 50))
+
     base.draw(win)
 
     for bird in birds:
